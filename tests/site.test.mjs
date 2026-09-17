@@ -33,7 +33,7 @@ test("all local assets and fragment links resolve", async function () {
         }
     }
     await access("docs/.nojekyll");
-    assert.ok(html.includes("refs/heads/master.zip"));
+    assert.ok(!html.includes("https://github.com/andrezammit/instadash" + String.fromCharCode(34)));
 });
 
 test("images reserve space and prioritize the main screenshot", function () {

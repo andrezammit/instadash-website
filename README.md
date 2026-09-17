@@ -1,6 +1,6 @@
 # Instagram Dashboard website
 
-A fast, accessible, dependency-free website for [Instagram Dashboard](https://github.com/andrezammit/instadash).
+A fast, accessible, dependency-free website for Instagram Dashboard.
 
 Live site: https://andrezammit.github.io/instadash-website/
 
@@ -25,4 +25,4 @@ A project-level robots.txt is intentionally omitted: crawlers read robots.txt on
 
 If you change the repository name or use a custom domain, update the canonical URL, Open Graph URL, JSON-LD URL, sitemap, and tests together.
 
-Installation currently links to the source download and manual installation guide. Replace it with verified browser-store URLs when available; retain the manual installation details as appropriate.
+The extension repository is private, so the website currently marks public installation as coming soon. Add a verified browser-store URL or an explicitly authorized public release when available. Do not link visitors to the private source repository.
