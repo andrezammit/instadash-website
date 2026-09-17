@@ -46,3 +46,13 @@ test("images reserve space and prioritize the main screenshot", function () {
     assert.match(hero, /fetchpriority="high"/);
     assert.doesNotMatch(hero, /loading="lazy"/);
 });
+
+test("installation buttons use the provided public Chrome Web Store listing", function () {
+    const storeUrl = "https://chromewebstore.google.com/detail/bofgllabgmnckgnakhicnkbhoanfaidb";
+    const installLinks = [...html.matchAll(/<a class="(?:button|nav-install)" href="([^"]+)"/g)];
+    assert.equal(installLinks.length, 3);
+    for (const link of installLinks) assert.equal(link[1], storeUrl);
+    assert.ok(!html.includes("Coming soon"));
+    const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]+?)<\/script>/)[1]);
+    assert.equal(schema.installUrl, storeUrl);
+});

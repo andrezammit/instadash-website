@@ -25,4 +25,4 @@ A project-level robots.txt is intentionally omitted: crawlers read robots.txt on
 
 If you change the repository name or use a custom domain, update the canonical URL, Open Graph URL, JSON-LD URL, sitemap, and tests together.
 
-The extension repository is private, so the website currently marks public installation as coming soon. Add a verified browser-store URL or an explicitly authorized public release when available. Do not link visitors to the private source repository.
+Installation buttons link to the public Chrome Web Store listing: https://chromewebstore.google.com/detail/bofgllabgmnckgnakhicnkbhoanfaidb. The extension source repository is private; do not link visitors to it.
