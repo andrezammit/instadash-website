@@ -20,6 +20,10 @@ test("indexable page has consistent SEO and structured application metadata", as
     assert.equal(schema.offers.price, "0");
     assert.equal(schema.aggregateRating, undefined);
     assert.ok((await readFile("docs/sitemap.xml", "utf8")).includes("<loc>" + canonical + "</loc>"));
+    const robots = await readFile("docs/robots.txt", "utf8");
+    assert.ok(robots.includes("User-agent: *"));
+    assert.ok(robots.includes("Allow: /"));
+    assert.ok(robots.includes("Sitemap: " + canonical + "sitemap.xml"));
 });
 
 test("all local assets and fragment links resolve", async function () {
