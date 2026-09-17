@@ -40,9 +40,9 @@ h1 span { color: var(--accent); }
 .window-dots { letter-spacing: 4px; color: #686c7e; }
 .window-label { color: #9a9ead; }
 .dashboard-preview img { width: 100%; }
-.features { padding-block: 108px 82px; }
+.features { padding-block: 64px 82px; }
 h2 { font-size: clamp(2rem, 3.7vw, 3.1rem); line-height: 1.15; letter-spacing: -.045em; font-weight: 550; margin-bottom: 25px; }
-.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 48px; gap: 42px; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 42px; }
 .feature-grid article { border-top: 1px solid var(--line); padding-top: 25px; }
 .feature-number { color: var(--accent); font-size: 12px; letter-spacing: .09em; }
 h3 { font-size: 20px; font-weight: 600; letter-spacing: -.025em; line-height: 1.4; margin-bottom: 14px; }
@@ -84,8 +84,8 @@ footer p { margin-top: 24px; margin-bottom: 0; }
     .window-label { display: none; }
     .window-bar { font-size: 10px; padding: 8px 12px; }
     .feature-grid, .viewer-section, .install-section, .faq { grid-template-columns: 1fr; gap: 30px; }
-    .features { padding-block: 66px 35px; }
-    .feature-grid { margin-top: 28px; gap: 22px; }
+    .features { padding-block: 40px 35px; }
+    .feature-grid { gap: 22px; }
     .viewer-section { padding-block: 15px 60px; }
     .install-section { padding-block: 50px; gap: 45px; }
     .faq { padding-block: 45px; gap: 0; }
