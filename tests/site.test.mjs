@@ -61,3 +61,10 @@ test("public page omits GitHub links and removed light-theme claims", function (
     assert.ok(!html.includes("https://github.com"));
     assert.doesNotMatch(html, /light (?:or dark|and dark|theme|mode)|Light on\./i);
 });
+
+test("hero starts closer to the site header without changing screenshot spacing", async function () {
+    const css = await readFile("docs/styles.css", "utf8");
+    assert.match(css, /\.hero \{ padding-top: 40px; text-align: center; \}/);
+    assert.match(css, /\.hero \{ padding-top: 30px; \}/);
+    assert.match(css, /\.hero-note \{ margin: 17px 0 45px;/);
+});

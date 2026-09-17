@@ -22,7 +22,7 @@ img { max-width: 100%; height: auto; display: block; }
 nav { display: flex; align-items: center; gap: 30px; font-size: 14px; }
 nav a { text-decoration: none; }
 .nav-install { border: 1px solid #575b71; border-radius: 7px; padding: 9px 15px; }
-.hero { padding-top: 76px; text-align: center; }
+.hero { padding-top: 40px; text-align: center; }
 .eyebrow { color: var(--accent); font-size: 13px; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; margin: 0 0 22px; }
 h1, h2, h3, p { margin-top: 0; }
 h1 { font-size: clamp(3rem, 6.5vw, 5.6rem); line-height: 1.04; font-weight: 600; letter-spacing: -.065em; margin-bottom: 27px; }
@@ -77,7 +77,7 @@ footer p { margin-top: 24px; margin-bottom: 0; }
     nav { gap: 16px; }
     nav > a:first-child { display: none; }
     .nav-install { padding: 8px 11px; font-size: 13px; }
-    .hero { padding-top: 53px; }
+    .hero { padding-top: 30px; }
     h1 { letter-spacing: -.055em; }
     .hero-copy { font-size: 17px; }
     .eyebrow { font-size: 12px; letter-spacing: .09em; }
