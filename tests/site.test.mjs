@@ -4,7 +4,7 @@ import { readFile, access } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const html = await readFile("docs/index.html", "utf8");
-const canonical = "https://andrezammit.github.io/instadash-website/";
+const canonical = "https://instadash.andrezammit.com/";
 
 test("indexable page has consistent SEO and structured application metadata", async function () {
     assert.match(html, /<html lang="en">/);
@@ -67,4 +67,11 @@ test("hero starts closer to the site header without changing screenshot spacing"
     assert.match(css, /\.hero \{ padding-top: 40px; text-align: center; \}/);
     assert.match(css, /\.hero \{ padding-top: 30px; \}/);
     assert.match(css, /\.hero-note \{ margin: 17px 0 45px;/);
+});
+
+test("Google Analytics uses the supplied measurement ID", function () {
+    const measurementId = "G-05XWKX7V2Q";
+    assert.ok(html.includes('src="https://www.googletagmanager.com/gtag/js?id=' + measurementId + '"'));
+    assert.ok(html.includes('gtag("config", "' + measurementId + '")'));
+    assert.ok(html.includes('rel="preconnect" href="https://www.googletagmanager.com"'));
 });
