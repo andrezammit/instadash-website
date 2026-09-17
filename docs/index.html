@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram Dashboard — A full-screen feed for your browser</title>
+    <meta name="description" content="Turn your Instagram home feed into an automatically updating dashboard. Browse a responsive grid, open full-screen media, and choose light or dark mode.">
+    <link rel="canonical" href="https://andrezammit.github.io/instadash-website/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#11131a">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Instagram Dashboard">
+    <meta property="og:title" content="Instagram Dashboard — Your feed, with room to breathe">
+    <meta property="og:description" content="An automatically updating Instagram feed, a responsive grid, and a focused full-screen viewer. A free, open-source browser extension.">
+    <meta property="og:url" content="https://andrezammit.github.io/instadash-website/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Instagram Dashboard">
+    <meta name="twitter:description" content="Give your Instagram feed room to breathe with a free, open-source dashboard extension.">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Instagram Dashboard",
+        "url": "https://andrezammit.github.io/instadash-website/",
+        "description": "A browser extension that turns the signed-in Instagram home feed into an automatically updating, full-screen dashboard.",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Windows, macOS, Linux",
+        "softwareRequirements": "Chrome or Chromium; Firefox supports temporary installation. An Instagram account is required.",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "André Zammit", "url": "https://github.com/andrezammit" },
+        "codeRepository": "https://github.com/andrezammit/instadash",
+        "license": "https://opensource.org/license/isc-license-txt/"
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+        <a class="brand" href="./" aria-label="Instagram Dashboard home"><img src="assets/icon.png" width="36" height="36" alt=""><span>instagram<span class="brand-secondary"> dashboard</span></span></a>
+        <nav aria-label="Main navigation">
+            <a href="#features">Features</a>
+            <a href="https://github.com/andrezammit/instadash">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="nav-install" href="#install">Get the extension</a>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="hero wrap" aria-labelledby="hero-title">
+            <p class="eyebrow"><span class="small-grid" aria-hidden="true">▦</span> A new perspective on your feed</p>
+            <h1 id="hero-title">Your Instagram.<br><span>Room to breathe.</span></h1>
+            <p class="hero-copy">Turn your feed into a full-screen dashboard.<br class="desktop-break"> More moments in view. Less scrolling in between.</p>
+            <div class="actions"><a class="button" href="#install">Get Instagram Dashboard <span aria-hidden="true">↗</span></a><a class="text-link" href="#features">Take a closer look <span aria-hidden="true">↓</span></a></div>
+            <p class="hero-note">Free &amp; open source <span aria-hidden="true">·</span> Chrome &amp; Firefox</p>
+            <figure class="dashboard-preview">
+                <div class="window-bar" aria-hidden="true"><span class="window-dots">● ● ●</span><span>instagram.com · dashboard</span><span class="window-label">A little more perspective</span></div>
+                <img src="assets/dashboard.jpg" width="1280" height="800" fetchpriority="high" alt="Instagram Dashboard in dark mode, showing a four-column grid of photo and carousel posts with captions.">
+                <figcaption>Real extension. Illustrative feed.</figcaption>
+            </figure>
+        </section>
+        <section class="features wrap" id="features" aria-labelledby="features-title">
+            <div class="section-heading"><p class="eyebrow">Less friction. More feed.</p><h2 id="features-title">The whole picture,<br>all in one place.</h2></div>
+            <div class="feature-grid">
+                <article><span class="feature-number">01 / MORE IN VIEW</span><h3>A feed that fits your screen.</h3><p>A responsive grid puts posts side by side and adapts to your window. Give that desktop display something worth displaying.</p></article>
+                <article><span class="feature-number">02 / ALWAYS FRESH</span><h3>Keep up. At your pace.</h3><p>Your feed refreshes automatically every minute. Pause it when you want to linger, or refresh manually whenever you're ready.</p></article>
+                <article><span class="feature-number">03 / MAKE IT YOURS</span><h3>Light on. Or lights out.</h3><p>Switch between light and dark themes. Open original posts or copy a link when you find something worth keeping.</p></article>
+            </div>
+        </section>
+        <section class="viewer-section wrap" aria-labelledby="viewer-title">
+            <div class="viewer-image"><img src="assets/media-viewer.jpg" width="1280" height="800" loading="lazy" alt="The extension's full-screen media viewer displaying a Venice canal photograph."></div>
+            <div class="viewer-copy"><p class="eyebrow">One moment. Full focus.</p><h2 id="viewer-title">Some things deserve<br>a closer look.</h2><p>Select a photo, video, or carousel to open the full-screen viewer. Move through the media and take in the details.</p><a class="text-link" href="#install">Make space for your feed <span aria-hidden="true">↗</span></a></div>
+        </section>
+        <section class="install-section wrap" id="install" aria-labelledby="install-title">
+            <div class="install-intro"><p class="eyebrow">Your feed, opened up.</p><h2 id="install-title">A few steps.<br>A different view.</h2><p>Install from the open-source project, sign in to Instagram, and select <strong>Dashboard</strong> in the sidebar.</p><a class="button" href="https://github.com/andrezammit/instadash/archive/refs/heads/master.zip">Download the extension <span aria-hidden="true">↓</span></a><a class="source-link" href="https://github.com/andrezammit/instadash#install-for-development">Full installation guide on GitHub ↗</a></div>
+            <div class="install-steps">
+                <h3>Install in Chrome / Chromium</h3>
+                <ol><li><strong>Download &amp; unzip.</strong><span>Download the project and extract the ZIP to a folder you can keep.</span></li><li><strong>Load the extension.</strong><span>Open <code>chrome://extensions</code>, enable Developer mode, choose <strong>Load unpacked</strong>, and select the extracted <code>source</code> folder.</span></li><li><strong>Open your dashboard.</strong><span>Visit <a href="https://www.instagram.com/">Instagram</a>, sign in, then select <strong>Dashboard</strong> in the sidebar.</span></li></ol>
+                <details><summary>Using Firefox?</summary><p>Open <code>about:debugging#/runtime/this-firefox</code>, select <strong>Load Temporary Add-on</strong>, and choose <code>source/manifest.json</code> from the extracted project. This temporary installation lasts until Firefox restarts.</p></details>
+            </div>
+        </section>
+        <section class="faq wrap" aria-labelledby="faq-title">
+            <h2 id="faq-title">Good to know.</h2>
+            <div>
+                <details><summary>Do I need an Instagram account?</summary><p>Yes. The extension uses your existing signed-in Instagram session to load your home feed. You do not need a separate dashboard account or an Instagram API key.</p></details>
+                <details><summary>Is Instagram Dashboard free?</summary><p>Yes. The extension is free and open source under the ISC license. You can inspect the code, report an issue, or contribute on <a href="https://github.com/andrezammit/instadash">GitHub</a>.</p></details>
+                <details><summary>What if my feed stops loading?</summary><p>Try reloading Instagram first. Instagram can change its internal endpoints or navigation, so an extension update may sometimes be needed. <a href="https://github.com/andrezammit/instadash/issues">Check or report an issue on GitHub</a>.</p></details>
+            </div>
+        </section>
+    </main>
+    <footer class="wrap">
+        <div class="footer-top"><a class="brand" href="./"><img src="assets/icon.png" width="28" height="28" alt=""><span>instagram dashboard</span></a><a href="https://github.com/andrezammit/instadash">Made by André Zammit · Open source ↗</a></div>
+        <p>An independent project. Not affiliated with, endorsed by, or sponsored by Instagram or Meta.</p>
+    </footer>
+</body>
+</html>
