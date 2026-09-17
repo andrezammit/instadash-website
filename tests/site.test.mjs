@@ -56,3 +56,8 @@ test("installation buttons use the provided public Chrome Web Store listing", fu
     const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]+?)<\/script>/)[1]);
     assert.equal(schema.installUrl, storeUrl);
 });
+
+test("public page omits GitHub links and removed light-theme claims", function () {
+    assert.ok(!html.includes("https://github.com"));
+    assert.doesNotMatch(html, /light (?:or dark|and dark|theme|mode)|Light on\./i);
+});
