@@ -79,3 +79,10 @@ test("Google Analytics uses the supplied measurement ID", function () {
     assert.ok(html.includes('gtag("config", "' + measurementId + '")'));
     assert.ok(html.includes('rel="preconnect" href="https://www.googletagmanager.com"'));
 });
+
+test("Google Search Console verification file is published at the site root", async function () {
+    assert.equal(
+        await readFile("docs/google161838d06d5000d8.html", "utf8"),
+        "google-site-verification: google161838d06d5000d8.html\n",
+    );
+});
