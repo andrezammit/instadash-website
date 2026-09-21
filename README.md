@@ -1,6 +1,6 @@
 # Instagram Dashboard website
 
-A fast, accessible, dependency-free website for Instagram Dashboard.
+A fast, accessible, dependency-free website for Instagram Dashboard, including its published privacy policy.
 
 Live site: https://instadash.andrezammit.com/
 
@@ -8,11 +8,11 @@ Live site: https://instadash.andrezammit.com/
 
 Requires Node.js 22 or later. Run `npm start` and open http://127.0.0.1:4173. Run `npm test` for metadata, link, and image checks.
 
-Edit `docs/index.html` and `docs/styles.css`. Static files in `docs/` are the published website; there is no build step. Screenshots originate from the extension's illustrative store fixture, not a personal Instagram feed.
+Edit `docs/index.html`, `docs/privacy-policy.html`, and `docs/styles.css`. Static files in `docs/` are the published website; there is no build step. Screenshots originate from the extension's illustrative store fixture, not a personal Instagram feed.
 
 ## Publishing
 
-GitHub Pages publishes the `docs/` folder on `main`. Push a commit to update the site. Keep this repository separate from the extension.
+GitHub Pages publishes the `docs/` folder on `main`. Push a commit to update the site. Keep this repository separate from the extension. The Chrome Web Store privacy-policy URL is [https://instadash.andrezammit.com/privacy-policy.html](https://instadash.andrezammit.com/privacy-policy.html); keep its extension data-practice details current before releasing a change that affects them.
 
 ## Search and discovery
 

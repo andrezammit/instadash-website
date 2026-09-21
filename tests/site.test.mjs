@@ -4,6 +4,7 @@ import { readFile, access } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const html = await readFile("docs/index.html", "utf8");
+const privacyPolicy = await readFile("docs/privacy-policy.html", "utf8");
 const canonical = "https://instadash.andrezammit.com/";
 
 test("indexable page has consistent SEO and structured application metadata", async function () {
@@ -38,6 +39,16 @@ test("all local assets and fragment links resolve", async function () {
     }
     await access("docs/.nojekyll");
     assert.ok(!html.includes("https://github.com/andrezammit/instadash" + String.fromCharCode(34)));
+});
+
+test("published privacy policy describes the extension and website data practices", async function () {
+    const policyUrl = canonical + "privacy-policy.html";
+    assert.ok(html.includes('href="privacy-policy.html"'));
+    assert.ok(privacyPolicy.includes('rel="canonical" href="' + policyUrl + '"'));
+    assert.match(privacyPolicy, /Instagram feed data/i);
+    assert.match(privacyPolicy, /Google Analytics/i);
+    assert.match(privacyPolicy, /optional feedback/i);
+    assert.ok((await readFile("docs/sitemap.xml", "utf8")).includes("<loc>" + policyUrl + "</loc>"));
 });
 
 test("images reserve space and prioritize the main screenshot", function () {
