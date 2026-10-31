@@ -48,7 +48,19 @@ test("published privacy policy describes the extension and website data practice
     assert.match(privacyPolicy, /Instagram feed data/i);
     assert.match(privacyPolicy, /Google Analytics/i);
     assert.match(privacyPolicy, /optional feedback/i);
+    assert.match(privacyPolicy, /comments, and replies/);
+    assert.match(privacyPolicy, /Like and unlike actions are sent directly to Instagram/);
     assert.ok((await readFile("docs/sitemap.xml", "utf8")).includes("<loc>" + policyUrl + "</loc>"));
+});
+
+test("feature copy and screenshot alternatives cover Stories and viewer interactions", function () {
+    assert.match(html, /Drag the strip/);
+    assert.match(html, /Like or unlike a post from the feed or viewer/);
+    assert.match(html, /expand replies/);
+    assert.match(html, /retries failed requests/);
+    const viewer = html.match(/<img src="assets\/media-viewer.jpg"[^>]+>/)[0];
+    assert.match(viewer, /loading="lazy"/);
+    assert.match(viewer, /alt="[^"]*comments, and an expanded reply/);
 });
 
 test("images reserve space and prioritize the main screenshot", function () {
